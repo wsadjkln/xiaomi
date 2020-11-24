@@ -186,7 +186,16 @@ function 刷火山() {
 function 刷快手() {
     home()
     sleep(1000)
-    desc("快手极速版").findOne().click()   
+    text("快手极速版").findOne().click()
+    sleep(2000)
+    if(id("title_tv").exists()){
+        sleep(1000)
+        click(60,140)
+        log("宝箱页面返回刷视频")
+        }
+        else{            
+        log("快手刷视频页面")
+        }   
 }
 
 function 刷淘宝() {
